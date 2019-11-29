@@ -1,0 +1,4 @@
+*.c
+*.i
+macosx_amd64_consts.nim
+other_consts.nim
