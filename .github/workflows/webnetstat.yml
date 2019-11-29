@@ -13,5 +13,17 @@ jobs:
       run: sudo apt update && sudo apt install -y libpcap0.8 libpcap0.8-dev
     - name: install latest nim
       run: wget https://nim-lang.org/choosenim/init.sh && sudo sh init.sh -y
+    - name: install nim deps
+      env:
+        PATH: /home/runner/.nimble/bin:$PATH
+      run: nimble install ws
+    - name: make consts
+      env:
+        PATH: /home/runner/.nimble/bin:$PATH
+      run: make update_consts
+    - name: qwe
+      run: ls consts
     - name: make
+      env:
+        PATH: /home/runner/.nimble/bin:$PATH
       run: make build_release
