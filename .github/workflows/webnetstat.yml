@@ -9,5 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: install deps
+      run: apt install nim libpcap
     - name: make
       run: make build_release
