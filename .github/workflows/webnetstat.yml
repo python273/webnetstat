@@ -10,6 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: install deps
-      run: sudo apt update && sudo apt install -y nim libpcap0.8 libpcap0.8-dev
+      run: sudo apt update && sudo apt install -y libpcap0.8 libpcap0.8-dev
+    - name: install latest nim
+      run: curl https://nim-lang.org/choosenim/init.sh -sSf | sh
     - name: make
       run: make build_release
