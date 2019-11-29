@@ -12,6 +12,6 @@ jobs:
     - name: install deps
       run: sudo apt update && sudo apt install -y libpcap0.8 libpcap0.8-dev
     - name: install latest nim
-      run: curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+      run: wget https://nim-lang.org/choosenim/init.sh && sudo sh init.sh -y
     - name: make
       run: make build_release
