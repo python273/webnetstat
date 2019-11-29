@@ -12,7 +12,7 @@ jobs:
     - name: install deps
       run: sudo apt update && sudo apt install -y libpcap0.8 libpcap0.8-dev
     - name: install latest nim
-      run: wget https://nim-lang.org/choosenim/init.sh && sudo sh init.sh -y
+      run: wget https://nim-lang.org/choosenim/init.sh && sh init.sh -y
     - name: install nim deps
       env:
         PATH: /home/runner/.nimble/bin:$PATH
